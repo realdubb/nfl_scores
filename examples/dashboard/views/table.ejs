@@ -30,7 +30,7 @@
             <% if(parseInt(games[i].vs) == parseInt(games[i].hs)) {%>
               N/A
             <% } else{ %>
-            <%= parseInt(games[i].vs) > parseInt(games[i].hs) ? "W" : "L" %>
+            <%= parseInt(games[i].hs) > parseInt(games[i].vs) ? "W" : "L" %>
             <% }%>
           </td>
           <td class='info'>
