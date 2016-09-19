@@ -1,28 +1,38 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
+<% include header %>
   <body>
-      <div class="container">
-          <h1><%= title %></h1>
-          <h2>Week <%= week %></h2>
+    <div class="container">
+        <h1><%= title %></h1>
+        <h2>Week <%= week %></h2>
+             <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="active"><a href="#dashboard" aria-controls="dashboard" role="tab" data-toggle="tab">Dashboard</a></li>
+              <li role="presentation"><a href="#table" aria-controls="table" role="tab" data-toggle="tab">Table</a></li>
+            </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="dashboard">
           <div class="games">
-              <% for (var i = 0; i < games.length; i++) { %>
-                  <div class="game">
-                      <div class="visitor team">
-                          <%= games[i].vnn %>: <%= games[i].vs %>
-                      </div>
-                      <div class="at">
-                          at
-                      </div>
-                      <div class="home team">
-                          <%= games[i].hnn %>: <%= games[i].hs %>
-                      </div>
-                  </div>
-              <% } %>
-          </div>
+                      <% for (var i = 0; i < games.length; i++) { %>
+                          <div class="game">
+                              <div class="visitor team">
+                                  <%= games[i].vnn %>: <%= games[i].vs %>
+                              </div>
+                              <div class="at">
+                                  at
+                              </div>
+                              <div class="home team">
+                                  <%= games[i].hnn %>: <%= games[i].hs %>
+                              </div>
+                          </div>
+                      <% } %>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="table">
+          <% include table %>
+        </div>
       </div>
+
+    </div>
   </body>
 </html>

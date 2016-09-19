@@ -6,8 +6,11 @@
     "start": "node app.js"
   },
   "dependencies": {
-    "express": "3.4.3",
+    "bootstrap": "^3.3.7",
+    "bootstrap-table": "^1.11.0",
     "ejs": "*",
+    "express": "3.4.3",
+    "jquery": "^3.1.0",
     "stylus": "*"
   }
 }

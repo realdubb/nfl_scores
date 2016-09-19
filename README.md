@@ -25,7 +25,9 @@ NFL Scores exposes a clean API for getting live data about the day's nfl scores.
 #### Example dashboard
 To view the live scores in an example app, go to the examples/dashboard directory, and run `node app.js`. Point your browser to localhost:3000, and you should see something like this:
 
-![Example Dashboard](https://raw.github.com/zackrw/nfl_scores/master/examples/dashboard/public/images/dashboard_example.png)
+![Example Dashboard](examples/dashboard/public/images/dashboard_view.png)
+
+![Example Table](examples/dashboard/public/images/table_view.png)
 
 #### Tests
 NFL Scores uses the mocha framework for unit tests.
